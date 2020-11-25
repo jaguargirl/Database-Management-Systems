@@ -97,7 +97,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ad&#x103;ugare coloane NOT NULL"/>
+        <Property name="text" type="java.lang.String" value="Add NOT NULL columns"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="tableName">
@@ -107,7 +107,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnAdd">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Adaug&#x103;"/>
+        <Property name="text" type="java.lang.String" value="Add"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
@@ -141,15 +141,15 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Coloana"/>
+        <Property name="text" type="java.lang.String" value="Column"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="mesaj">
+    <Component class="javax.swing.JLabel" name="message">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="mesaj2">
+    <Component class="javax.swing.JLabel" name="message2">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel3"/>
       </Properties>
