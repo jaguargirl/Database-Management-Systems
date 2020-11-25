@@ -7,7 +7,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Proiect SGBD"/>
+    <Property name="title" type="java.lang.String" value="SGBD Project"/>
     <Property name="alwaysOnTop" type="boolean" value="true"/>
   </Properties>
   <SyntheticProperties>
@@ -93,7 +93,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lOption">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Alege&#x21b;i activitatea dorit&#x103;"/>
+            <Property name="text" type="java.lang.String" value="Select activity;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="btnNN">
@@ -101,7 +101,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btnGroup"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ad&#x103;ugare constr&#xe2;ngeri NOT NULL"/>
+            <Property name="text" type="java.lang.String" value="Adding NOT NULL constraints"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="btnPK">
@@ -109,7 +109,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btnGroup"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ad&#x103;ugare chei primare"/>
+            <Property name="text" type="java.lang.String" value="Adding Primary Key"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnOK">
