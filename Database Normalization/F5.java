@@ -40,13 +40,13 @@ public class F5 extends javax.swing.JFrame {
         mesaj2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Proiect SGBD");
+        setTitle("SGBD Project");
 
-        jLabel1.setText("Adăugare coloane NOT NULL");
+        jLabel1.setText("Add NOT NULL columns");
 
-        tableName.setText("Tabel");
+        tableName.setText("Table");
 
-        btnAdd.setText("Adaugă");
+        btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
@@ -65,7 +65,7 @@ public class F5 extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Coloana");
+        jLabel2.setText("Column");
 
         mesaj.setText("jLabel3");
 
@@ -136,7 +136,7 @@ public class F5 extends javax.swing.JFrame {
         mesaj.setText("");
         mesaj2.setText("");
         if (cmbTable.getItemCount() == 0) {//daca nu mai exista tabele de corectat, se afiseaza un mesaj corespunzator 
-            JOptionPane.showMessageDialog(null, "Au fost adăugate toate constrângerile de existență necesare", "Atenție", JOptionPane.OK_OPTION);
+            JOptionPane.showMessageDialog(null, "All the requested contraints of existence were successfuly added", "Attention", JOptionPane.OK_OPTION);
             this.dispose();//fereastra curenta se inchide
             new F1().setVisible(true);//se afiseaza prima fereastra
         }
@@ -155,14 +155,14 @@ public class F5 extends javax.swing.JFrame {
                 }
             }
             if (columns.get(columns.size() - 1) == "G") {
-                mesaj.setText("Tabelul " + tabN + " conține coloane fără câmpuri null.");
+                mesaj.setText("Tabel " + tabN + " contains columns with no null fields.");
                 mesaj.setForeground(new Color(23, 150, 0));
-                mesaj2.setText("Alegeți o coloană pentru a adăuga constrângerea de existență.");
+                mesaj2.setText("Select a column for adding constraint of existence");
                 mesaj2.setForeground(new Color(23, 150, 0));
             } else {
-                mesaj.setText("Tabelul " + tabN + " nu conține coloane fără câmpuri null.");
+                mesaj.setText("Table " + tabN + " does not contain columns with no null fields");
                 mesaj.setForeground(new Color(186, 0, 37));
-                mesaj2.setText("Alegeți o coloană pentru a completa cu valori și adăuga constrângerea de existență");
+                mesaj2.setText("Select a column to fill with values and add constraint of existence");
                 mesaj2.setForeground(new Color(186, 0, 37));
             }
         }
