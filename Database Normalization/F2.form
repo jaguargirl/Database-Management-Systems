@@ -101,7 +101,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btnGroup"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Adding NOT NULL constraints"/>
+            <Property name="text" type="java.lang.String" value="Add NOT NULL constraints"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="btnPK">
@@ -109,7 +109,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btnGroup"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Adding Primary Key"/>
+            <Property name="text" type="java.lang.String" value="Add Primary Keys"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnOK">
