@@ -52,7 +52,7 @@ public class Workspace {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
         } catch (Exception e) {
-            System.err.println("Driver indisponibil: " + e);
+            System.err.println("Indisponible driver: " + e);
         }
         try {
             conn = DriverManager.getConnection(URL, schema, password);
@@ -98,11 +98,11 @@ public class Workspace {
                 if (e.getErrorCode() == 955) {//daca acest nume de secventa exita
                     sequence_name = "my_sq_";//atribuim numele initial, se incrementeaza i, si la urmatoare iteratie, numele secventei va fi my_sq_i, pana cand nu se gaseste un nume liber
                 } else {
-                    JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return -1;
                 }
             } catch (Exception se) {
-                JOptionPane.showMessageDialog(null, se.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, se.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                 return -1;
             }
         }
@@ -127,11 +127,11 @@ public class Workspace {
                         e++;
                         add = Integer.toString(e);
                     } else {
-                        JOptionPane.showMessageDialog(null, ex.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                         return -1;
                     }
                 } catch (Exception se) {
-                    JOptionPane.showMessageDialog(null, se.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, se.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return -1;
                 }
             }
@@ -149,11 +149,11 @@ public class Workspace {
                         e++;
                         add = Integer.toString(e);
                     } else {
-                        JOptionPane.showMessageDialog(null, sqle.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                         return -1;
                     }
                 } catch (Exception exc) {
-                    JOptionPane.showMessageDialog(null, exc.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, exc.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return -1;
                 }
             }
@@ -179,7 +179,7 @@ public class Workspace {
             lines = e;
             return 1;
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return -1;
         }
     }
@@ -250,11 +250,11 @@ public class Workspace {
                     e++;
                     add = Integer.toString(e);
                 } else {
-                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return -1;
                 }
             } catch (Exception se) {
-                JOptionPane.showMessageDialog(null, se.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, se.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                 return -1;
             }
         }
@@ -277,7 +277,7 @@ public class Workspace {
                 refA.add(add);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return -1;
         }
         if (refA.isEmpty()) {
@@ -308,11 +308,11 @@ public class Workspace {
                             e++;
                             add = Integer.toString(e);
                         } else {
-                            JOptionPane.showMessageDialog(null, sqle.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                             return -1;
                         }
                     } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                         return -1;
                     }
                 }
@@ -336,7 +336,7 @@ public class Workspace {
                     st = conn.createStatement();
                     rs = st.executeQuery(query);
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return -1;
                 }
             }
@@ -367,11 +367,11 @@ public class Workspace {
                             e++;
                             add = Integer.toString(e);
                         } else {
-                            JOptionPane.showMessageDialog(null, sqle.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                             return -1;
                         }
                     } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                         return -1;
                     }
                 }
@@ -380,7 +380,7 @@ public class Workspace {
                     st = conn.createStatement();
                     rs = st.executeQuery(query);
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return -1;
                 }
             }
@@ -400,7 +400,7 @@ public class Workspace {
                     st = conn.createStatement();
                     rs = st.executeQuery(query);
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return -1;
                 }
             }
@@ -417,7 +417,7 @@ public class Workspace {
             rs = st.executeQuery(query);
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return -1;
         }
         b = true;
@@ -433,11 +433,11 @@ public class Workspace {
                     e++;
                     add = Integer.toString(e);
                 } else {
-                    JOptionPane.showMessageDialog(null, sqle.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     return -1;
                 }
             } catch (Exception exc) {
-                JOptionPane.showMessageDialog(null, exc.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, exc.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                 return -1;
             }
         }
@@ -464,11 +464,11 @@ public class Workspace {
                             e++;
                             add = Integer.toString(e);
                         } else {
-                            JOptionPane.showMessageDialog(null, sqle.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(null, sqle.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                             return -1;
                         }
                     } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                         return -1;
                     }
                 }
@@ -555,7 +555,7 @@ public class Workspace {
                 allTables.add(rs.getString("TABLE_NAME"));//adauga denumirile intr-o lista
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return -1;
         }
         query = "SELECT TABLE_NAME, COLUMN_NAME FROM USER_TAB_COLUMNS WHERE NULLABLE='N' MINUS SELECT ucc.TABLE_NAME,ucc.COLUMN_NAME FROM (USER_CONSTRAINTS uc JOIN USER_CONS_COLUMNS ucc ON uc.CONSTRAINT_NAME=ucc.CONSTRAINT_NAME) JOIN USER_TAB_COLUMNS utc ON utc.TABLE_NAME=uc.TABLE_NAME AND utc.COLUMN_NAME=ucc.COLUMN_NAME WHERE uc.CONSTRAINT_TYPE='P'";
@@ -566,7 +566,7 @@ public class Workspace {
                 flexible.add(rs.getString("TABLE_NAME"));//adaugam numele tabelelor respective in lista
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return -1;
         }
         for (int i = 0; i < allTables.size(); i++) {//parcurgem lista tuturor tabelelor
@@ -617,7 +617,7 @@ public class Workspace {
                 return flexible;
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return null;
         }
 
@@ -629,7 +629,7 @@ public class Workspace {
             st = conn.createStatement();
             rs = st.executeQuery(query);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return -1;
         }
         return 1;
@@ -648,9 +648,9 @@ public class Workspace {
             boolean b;
             if (dPrecision != null) {
                 b = true;
-                String mesaj = "Introduceti o valoare de tip " + dType + "(" + dPrecision + ") pentru a înlocui câmpurile NULL din coloana " + colN;
+                String mesaj = "Introduce a value of type " + dType + "(" + dPrecision + ") to fill null fields from the column " + colN;
                 while (b) {
-                    value = JOptionPane.showInputDialog(null, mesaj, "Atenție", JOptionPane.OK_OPTION);
+                    value = JOptionPane.showInputDialog(null, mesaj, "Attention", JOptionPane.OK_OPTION);
                     query = "UPDATE " + tabN + " SET " + colN + "=" + value + " WHERE " + colN + " IS NULL";
                     try {
                         rs = st.executeQuery(query);
@@ -658,13 +658,13 @@ public class Workspace {
                     } catch (SQLException sql) {
                         int code = sql.getErrorCode();
                         if (code == 936) {
-                            mesaj = "Nu ați introdus nimic. Introduceți o valoare de tip " + dType + "(" + dPrecision + ") pentru a înlocui câmpurile NULL din coloana " + colN;
+                            mesaj = "You did not introduce anything. Introduce a value of type " + dType + "(" + dPrecision + ") to fill null fields from the column " + colN;
                         } else if (code == 904) {
-                            mesaj = "Valoarea introdusă nu este numerică. Introduceți o valoare de tip " + dType + "(" + dPrecision + ") pentru a înlocui câmpurile NULL din coloana " + colN;
+                            mesaj = "The introduced value is not numerical. Introduce a value of type " + dType + "(" + dPrecision + ") to fill null fields from the column " + colN;
                         } else if (code == 1438) {
-                            mesaj = "Ați introdus o valoare prea mare. Introduceți o valoare de tip " + dType + "(" + dPrecision + ") pentru a înlocui câmpurile NULL din coloana " + colN;
+                            mesaj = "The introduced value is too big. Introduce a value of type " + dType + "(" + dPrecision + ") to fill null fields from the column " + colN;
                         } else {
-                            JOptionPane.showMessageDialog(null, sql.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(null, sql.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                             return -1;
                         }
                     }
@@ -679,12 +679,12 @@ public class Workspace {
                         rs.next();
                         format = rs.getString(1);
                     } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                         return -1;
                     }
-                    String mesaj = "Introduceti o valoare de tip " + dType + "(" + format + ") pentru a înlocui câmpurile NULL din coloana " + colN;
+                    String mesaj = "Introduce a value of type " + dType + "(" + format + ") to fill null fields from the column " + colN;
                     while (b) {
-                        value = JOptionPane.showInputDialog(null, mesaj, "Atenție", JOptionPane.OK_OPTION);
+                        value = JOptionPane.showInputDialog(null, mesaj, "Attention", JOptionPane.OK_OPTION);
                         query = "UPDATE " + tabN + " SET " + colN + "=TO_DATE('" + value + "','" + format + "') WHERE " + colN + " IS NULL";
                         try {
                             rs = st.executeQuery(query);
@@ -692,10 +692,10 @@ public class Workspace {
                         } catch (SQLException sq) {
                             int code = sq.getErrorCode();
                             if (code == 1843 || code == 1858 || code == 1841 || code == 1830 || code == 1861) {
-                                mesaj = "Valoare eronată. Introduceti o valoare de tip " + dType + "(" + format + ") pentru a înlocui câmpurile NULL din coloana " + colN;
-                                JOptionPane.showMessageDialog(null, sq.getMessage() + " " + code, "Eroare", JOptionPane.ERROR_MESSAGE);
+                                mesaj = "Eronate value. Introduce a value of type " + dType + "(" + format + ") to fill null fields from the column " + colN;
+                                JOptionPane.showMessageDialog(null, sq.getMessage() + " " + code, "Error", JOptionPane.ERROR_MESSAGE);
                             } else {
-                                JOptionPane.showMessageDialog(null, sq.getMessage() + " " + code, "Eroare", JOptionPane.ERROR_MESSAGE);
+                                JOptionPane.showMessageDialog(null, sq.getMessage() + " " + code, "Error", JOptionPane.ERROR_MESSAGE);
                             }
                         } catch (Exception e) {
                             JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
@@ -703,13 +703,13 @@ public class Workspace {
                         }
                     }
                 } else {
-                    String mesaj = "Introduceti o valoare de tip " + dType + "(" + dLength + ") pentru a înlocui câmpurile NULL din coloana " + colN;
+                    String mesaj = "Introduce a value of type " + dType + "(" + dLength + ") Introduce a value of type " + colN;
                     while (b) {
-                        value = JOptionPane.showInputDialog(null, mesaj, "Atenție", JOptionPane.OK_OPTION);
+                        value = JOptionPane.showInputDialog(null, mesaj, "Attention", JOptionPane.OK_OPTION);
                         if (value.length() == 0) {
-                            mesaj = "Nu ați introdus nimic. Introduceți o valoare de tip " + dType + "(" + dLength + ") pentru a înlocui câmpurile NULL din coloana " + colN;
+                            mesaj = "You did not introduce anything. Introduce a value of type " + dType + "(" + dLength + ") to fill null fields from the column " + colN;
                         } else if (value.length() > Integer.parseInt(dLength)) {
-                            mesaj = "Ați introdus o valoare prea mare. Introduceți o valoare de tip " + dType + "(" + dLength + ") pentru a înlocui câmpurile NULL din coloana " + colN;
+                            mesaj = "Introduced value is too big. Introduce a value of type " + dType + "(" + dLength + ") to fill null fields from the column " + colN;
                         } else {
                             b = false;
                         }
@@ -719,7 +719,7 @@ public class Workspace {
                 }
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Eroare", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             return -1;
         }
         int rs = this.addNOTNULL(tabN, colN);
