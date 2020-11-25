@@ -21,16 +21,16 @@ public class F2 extends javax.swing.JFrame {
         btnOK = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Proiect SGBD");
+        setTitle("SGBD Project");
         setAlwaysOnTop(true);
 
-        lOption.setText("Alegeți activitatea dorită");
+        lOption.setText("Select activity");
 
         btnGroup.add(btnNN);
-        btnNN.setText("Adăugare constrângeri NOT NULL");
+        btnNN.setText("Add NOT NULL constraints");
 
         btnGroup.add(btnPK);
-        btnPK.setText("Adăugare chei primare");
+        btnPK.setText("ADD PRIMARY KEYS");
 
         btnOK.setText("OK");
         btnOK.addActionListener(new java.awt.event.ActionListener() {
@@ -93,9 +93,9 @@ public class F2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-        String message="Selectați o opțiune";
+        String message="Selectionan option";
         if(btnGroup.getSelection()==null){
-            JOptionPane.showMessageDialog(p, message, "Atenție", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(p, message, "Attention", JOptionPane.WARNING_MESSAGE);
             return;
         }
         if(btnPK.isSelected()){
