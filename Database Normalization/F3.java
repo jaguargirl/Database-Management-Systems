@@ -47,27 +47,27 @@ public class F3 extends javax.swing.JFrame {
             }
         });
 
-        l3.setText("Pas2. Verificați corectitudinea cheilor primare existente");
+        l3.setText("Step1. Verify current Primary Keys");
 
-        l2.setText("Pas1.2 Adăugați chei primare surogat tabelelor la care acestea lipsesc");
+        l2.setText("Step1.2 Add surrogate Primary Keys to tabels without PK");
 
-        btnAdd.setText("Adaugă");
+        btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
 
-        btnVerify.setText("Verifică");
+        btnVerify.setText("Verify");
         btnVerify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerifyActionPerformed(evt);
             }
         });
 
-        l4.setText("Pas2.1 Adăugați chei primare surogat tabelelor cu cheile primare gestionate greșit");
+        l4.setText("Step2.1 Add surrogate Primary Keys to tables with incorrect PK");
 
-        btnAddPK2.setText("Adaugă");
+        btnAddPK2.setText("Add");
         btnAddPK2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddPK2ActionPerformed(evt);
@@ -154,15 +154,15 @@ public class F3 extends javax.swing.JFrame {
         int rsp = w.verifyTablesWithoutPK();
         String message;
         if (rsp == 0) {
-            message = "Nu exista tabele fără chei primare în această bază de date";
-            JOptionPane.showMessageDialog(p, message, "Ateție", JOptionPane.OK_OPTION);
+            message = "There are no tabels without Primary Key";
+            JOptionPane.showMessageDialog(p, message, "Attention", JOptionPane.OK_OPTION);
             l1.setEnabled(false);
             btnSearch.setVisible(false);
             l3.setVisible(true);
             btnVerify.setVisible(true);
         } else if (rsp == 1) {
-            message = "Exista tabele fără chei primare în această bază de date";
-            JOptionPane.showMessageDialog(p, message, "Atenție", JOptionPane.OK_OPTION);
+            message = "There are tables with no Primary Key";
+            JOptionPane.showMessageDialog(p, message, "Attention", JOptionPane.OK_OPTION);
             l1.setEnabled(false);
             btnSearch.setVisible(false);
             l2.setVisible(true);
@@ -182,8 +182,8 @@ public class F3 extends javax.swing.JFrame {
             this.dispose();
             new F1().setVisible(true);
         } else {
-            String message = "Cheile primare surogat au fost adaugate cu succes tabelelor fara chei primare";
-            JOptionPane.showMessageDialog(null, message, "Atenție", JOptionPane.OK_OPTION);
+            String message = "Surrogate Primary Keys where successfuly added to tabels witout PK";
+            JOptionPane.showMessageDialog(null, message, "Attention", JOptionPane.OK_OPTION);
             l2.setEnabled(false);
             btnAdd.setVisible(false);
             l3.setVisible(true);
@@ -200,31 +200,31 @@ public class F3 extends javax.swing.JFrame {
             new F1().setVisible(true);
         }
         if (ret == 0) {
-            message = "Toate tabelele au cheile primare generate corect";
-            JOptionPane.showMessageDialog(null, message, "Atenție", JOptionPane.OK_OPTION);
+            message = "All tabels have correct Primary Keys";
+            JOptionPane.showMessageDialog(null, message, "Attention", JOptionPane.OK_OPTION);
             l3.setEnabled(false);
             btnVerify.setVisible(false);
             new F1().setVisible(true);
         }
         if (ret == 1) {
-            message = "Există tabele cu chei primare pe mai multe atribute";
-            JOptionPane.showMessageDialog(null, message, "Atenție", JOptionPane.OK_OPTION);
+            message = "There are tabels with multiple Primary Key";
+            JOptionPane.showMessageDialog(null, message, "Attention", JOptionPane.OK_OPTION);
             l3.setEnabled(false);
             btnVerify.setVisible(false);
             l4.setVisible(true);
             btnAddPK2.setVisible(true);
         }
         if (ret == 2) {
-            message = "Există tabele cu chei primare care nu sunt numerice";
-            JOptionPane.showMessageDialog(null, message, "Atenție", JOptionPane.OK_OPTION);
+            message = "There are tabels with non numerical Primary Key";
+            JOptionPane.showMessageDialog(null, message, "Attention", JOptionPane.OK_OPTION);
             l3.setEnabled(false);
             btnVerify.setVisible(false);
             l4.setVisible(true);
             btnAddPK2.setVisible(true);
         }
         if (ret == 3) {
-            message = "Există atât tabele cu chei primare pe mai multe atricute cât și chei primare care nu sunt numerice";
-            JOptionPane.showMessageDialog(null, message, "Atenție", JOptionPane.OK_OPTION);
+            message = "There are both non numerical and multiple Primary Keys";
+            JOptionPane.showMessageDialog(null, message, "Attention", JOptionPane.OK_OPTION);
             l3.setEnabled(false);
             btnVerify.setVisible(false);
             l4.setVisible(true);
@@ -235,8 +235,8 @@ public class F3 extends javax.swing.JFrame {
     private void btnAddPK2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPK2ActionPerformed
         int r = w.addPK2();
         if (r == 1) {
-            String message = "Toate tabelele au cheile primare gestionate corect.";
-            JOptionPane.showMessageDialog(null, message, "Atenție", JOptionPane.OK_OPTION);
+            String message = "All tabels have correct Primary Keys";
+            JOptionPane.showMessageDialog(null, message, "Attention", JOptionPane.OK_OPTION);
             this.dispose();
             new F1().setVisible(true);
         } else {
