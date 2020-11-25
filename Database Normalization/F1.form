@@ -92,17 +92,17 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lWelcome">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bine a&#x21b;i venit!"/>
+            <Property name="text" type="java.lang.String" value="Welcome!"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lAsk">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Dori&#x21b;i s&#x103; modifica&#x21b;i o baz&#x103; de date?"/>
+            <Property name="text" type="java.lang.String" value="Do you want to modify a database?"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnYes">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Da"/>
+            <Property name="text" type="java.lang.String" value="Yes"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnYesActionPerformed"/>
@@ -110,7 +110,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnNo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nu"/>
+            <Property name="text" type="java.lang.String" value="No"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNoActionPerformed"/>
@@ -187,12 +187,12 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lData">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Completa&#x21b;i mai jos cu datele necesare"/>
+            <Property name="text" type="java.lang.String" value="Fill with the requested information"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lURL">
           <Properties>
-            <Property name="text" type="java.lang.String" value="URL Conexiune"/>
+            <Property name="text" type="java.lang.String" value="Connection URL"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tURL">
@@ -209,14 +209,14 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lPassword">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Parola"/>
+            <Property name="text" type="java.lang.String" value="Password"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="tPassword">
         </Component>
         <Component class="javax.swing.JButton" name="btnConnect">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Conectez&#x103;-te"/>
+            <Property name="text" type="java.lang.String" value="Connect"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConnectActionPerformed"/>
