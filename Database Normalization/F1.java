@@ -33,20 +33,20 @@ public class F1 extends javax.swing.JFrame {
         btnConnect = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Proiect SGBD");
+        setTitle("SGBD Project");
 
-        lWelcome.setText("Bine ați venit!");
+        lWelcome.setText("Welcome!");
 
-        lAsk.setText("Doriți să modificați o bază de date?");
+        lAsk.setText("Do you want to modify a database?");
 
-        btnYes.setText("Da");
+        btnYes.setText("Yes");
         btnYes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnYesActionPerformed(evt);
             }
         });
 
-        btnNo.setText("Nu");
+        btnNo.setText("No");
         btnNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNoActionPerformed(evt);
@@ -83,9 +83,9 @@ public class F1 extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
         );
 
-        lData.setText("Completați mai jos cu datele necesare");
+        lData.setText("Fill with the requested information");
 
-        lURL.setText("URL Conexiune");
+        lURL.setText("Connection URL");
 
         tURL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,9 +95,9 @@ public class F1 extends javax.swing.JFrame {
 
         lSchema.setText("Schema");
 
-        lPassword.setText("Parola");
+        lPassword.setText("Password");
 
-        btnConnect.setText("Conecteză-te");
+        btnConnect.setText("Connect");
         btnConnect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConnectActionPerformed(evt);
@@ -194,17 +194,17 @@ public class F1 extends javax.swing.JFrame {
         String password = tPassword.getText();
         String message;
         if (url.equals("")) {
-            message = "Completați câmpul URL";
+            message = "Fill the URL field";
             JOptionPane.showMessageDialog(p1, message, "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         if (schema.equals("")) {
-            message = "Completați câmpul Schema";
+            message = "Fill the Schema field";
             JOptionPane.showMessageDialog(p1, message, "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         if (password.equals("")) {
-            message = "Completați câmpul Parola";
+            message = "Fill the Password field";
             JOptionPane.showMessageDialog(p1, message, "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
@@ -215,7 +215,7 @@ public class F1 extends javax.swing.JFrame {
         w.setPassword(password);
         int rsp = w.connect();
         if (rsp == 0) {
-            message = "Date eronate, conexiune eșuată";
+            message = "Error data, connection failed";
             JOptionPane.showMessageDialog(p, message, "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         } else {
@@ -225,8 +225,8 @@ public class F1 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConnectActionPerformed
 
     private void btnNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoActionPerformed
-        String[] buttons = {"Da", "Nu"};
-        int x = JOptionPane.showOptionDialog(p, "Doriți să finisați programul?", "Atenție", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, buttons, buttons[0]);
+        String[] buttons = {"Yes", "No"};
+        int x = JOptionPane.showOptionDialog(p, "Do you want to finish the program?", "Attention", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, buttons, buttons[0]);
         if (x == 0) {
             this.dispose();
             System.exit(0);
