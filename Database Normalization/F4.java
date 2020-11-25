@@ -28,20 +28,20 @@ public class F4 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Proiect SGBD");
 
-        lTitlu.setText("Adăugare constrângeri NOT NULL ");
+        lTitlu.setText("Add NOT NULL constraints");
 
-        l1.setText("Pas 1. Verificați existența tabelelor fără coloane NOT NULL");
+        l1.setText("Step 1. Verify if there are tabels with no NOT NULL colums");
 
-        btnVerify.setText("Verifică");
+        btnVerify.setText("Verify");
         btnVerify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerifyActionPerformed(evt);
             }
         });
 
-        l2.setText("Pas 2. Căutați tabele care au coloane cu toate câmpurile completate");
+        l2.setText("Step 2. Find tabels that have columns with all fields completed");
 
-        btnSearch.setText("Caută");
+        btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchActionPerformed(evt);
@@ -105,16 +105,16 @@ public class F4 extends javax.swing.JFrame {
         int rsp=w.checkTablesNOTNULL();//Verifica daca exista tabele cu insuficiente coloane not null
         String message;
         if(rsp==0){//daca toate tabelele sunt proiectate corect, fereastra curenta se inchide si se deschide fereastra initiala
-            message="Toate tabelele au cel puțin o coloană NOT NULL (în afară de PK)";
-            JOptionPane.showMessageDialog(null, message, "Atenție", JOptionPane.OK_OPTION);
+            message="All tabels have at least one NOT NULL column (except PK)";
+            JOptionPane.showMessageDialog(null, message, "Attention", JOptionPane.OK_OPTION);
             l1.setEnabled(false);
             btnVerify.setEnabled(false);
             this.dispose();
             new F1().setVisible(true);
         }
         if(rsp==1){
-            message="Există tabele fără coloane NOT NULL";//daca exista tabele proiectate gresit, se afiseaza mesaj corespunzator si se face vizibila optiunea urmatoare
-            JOptionPane.showMessageDialog(null, message, "Atenție", JOptionPane.OK_OPTION);
+            message="There are tabels with no NOT NULL columns";//daca exista tabele proiectate gresit, se afiseaza mesaj corespunzator si se face vizibila optiunea urmatoare
+            JOptionPane.showMessageDialog(null, message, "Attention", JOptionPane.OK_OPTION);
             l1.setEnabled(false);
             btnVerify.setEnabled(false);
             l2.setVisible(true);
